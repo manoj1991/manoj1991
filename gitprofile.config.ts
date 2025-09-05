@@ -1,5 +1,6 @@
 // gitprofile.config.ts
 
+
 const CONFIG = {
   github: {
     username: 'manoj1991', // Your GitHub org/user name. (This is the only required config)
@@ -34,7 +35,7 @@ const CONFIG = {
         {
           title: 'Tata CLiQ E-commerce Platform',
           description: `Tata CLiQ is a flagship omni-channel e-commerce platform by the Tata Group—offering fashion, electronics, luxury and lifestyle products across digital and physical touchpoints. During my tenure, I led feature enhancements and maintenance efforts that improved developer effectiveness by 20%, reduced bugs by 15%, and elevated user satisfaction through collaborative design-driven development.`,
-          imageUrl: 'src/assets/img/tatacliq.png', // Ensure this matches your actual image filename path
+          imageUrl: "/img/tatacliq.png",  // Ensure this matches your actual image filename path
           link: 'https://www.tatacliq.com/',
           technologies: ['React.js', 'Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'Node.js', 'GraphQL', 'Docker', 'Zustand', 'Jenkins'],
         },
@@ -43,8 +44,8 @@ const CONFIG = {
           title: 'Admin Dashboard',
           description:
             'Developed a modern admin dashboard with focus on performance, scalability, and state management. Integrated charts, role-based access, and modular components. Used Zustand for lightweight state management and optimized rendering for large datasets.',
-          imageUrl: 'src/assets/img/admin_dashboard.png', // 🔗 local image
-          link: 'https://example.com', // replace with real demo or repo link if available
+          imageUrl: "/img/admin_dashboard.png",  // 🔗 local image
+          link: '', // replace with real demo or repo link if available
           technologies: [
             'React.js',
             'Next.js',
@@ -61,7 +62,7 @@ const CONFIG = {
           title: 'Impelsys Learning & Publishing Solutions',
           description:
             'Impelsys is a global provider of digital learning and content delivery solutions for publishers, educators, and enterprises. Worked on Magento PWA-based e-learning products, optimizing performance and analytics. Supported large-scale digital publishing workflows with integrated PWA technology.',
-          imageUrl: 'src/assets/img/impelsys.png', // 🔗 local image
+          imageUrl: "/img/impelsys.png", // 🔗 local image
           link: 'https://www.impelsys.com/',
           technologies: [
             'Magento',
@@ -77,7 +78,7 @@ const CONFIG = {
           title: 'Meow Meow Tweet – Shopify Store',
           description:
             'Meow Meow Tweet is a vegan body care company focused on sustainability. The website runs on Shopify, offering an engaging e-commerce experience with eco-friendly design. Integrated custom themes, analytics, and SEO-friendly optimizations to enhance conversions and user engagement.',
-          imageUrl: 'src/assets/img/meowmeowtweet.png', // 🔗 local image
+          imageUrl: "/img/meowmeowtweet.png",  // 🔗 local image
           link: 'https://meowmeowtweet.com/',
           technologies: [
             'Shopify',
@@ -117,8 +118,7 @@ const CONFIG = {
     email: 'manojmkadolkar@gmail.com',
   },
   resume: {
-    fileUrl:
-      'src/assets/pdf/Manoj_kadolkar-9y-sp.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '/Manoj_kadolkar-9y-sp.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
     'JavaScript',
@@ -131,6 +131,8 @@ const CONFIG = {
     'Node.js',
     'Nest.js',
     'RTK',
+    'Web Socket',
+    'Web Hooks',
     'D3.js',
     'GraphQL',
     'Next.js',
@@ -191,7 +193,7 @@ const CONFIG = {
       position: 'Web Developer',
       from: 'Jan 2016',
       to: 'Feb 2017',
-      companyLink: 'https://example.com', // add real link if company has one
+      companyLink: 'https://shaastechcompany.com', // add real link if company has one
     },
   ],
 

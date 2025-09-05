@@ -1,8 +1,8 @@
+import { useEffect, MouseEvent } from 'react';
 import { RiDice4Line } from 'react-icons/ri';
 import { SanitizedThemeConfig } from '../../interfaces/sanitized-config';
 import { LOCAL_STORAGE_KEY_NAME } from '../../constants';
 import { skeleton } from '../../utils';
-import { MouseEvent } from 'react';
 
 /**
  * Renders a theme changer component.
@@ -33,11 +33,20 @@ const ThemeChanger = ({
 
     document.querySelector('html')?.setAttribute('data-theme', selectedTheme);
 
-    typeof window !== 'undefined' &&
+    if (typeof window !== 'undefined') {
       localStorage.setItem(LOCAL_STORAGE_KEY_NAME, selectedTheme);
+    }
 
     setTheme(selectedTheme);
   };
+
+  // ⬇️ Ensure theme is applied when prop changes
+  useEffect(() => {
+    if (theme) {
+      document.querySelector('html')?.setAttribute('data-theme', theme);
+      localStorage.setItem(LOCAL_STORAGE_KEY_NAME, theme);
+    }
+  }, [theme]);
 
   return (
     <div className="card overflow-visible shadow-lg card-sm bg-base-100">
@@ -58,8 +67,8 @@ const ThemeChanger = ({
             {loading
               ? skeleton({ widthCls: 'w-16', heightCls: 'h-5' })
               : theme === themeConfig.defaultTheme
-                ? 'light'
-                : theme}
+              ? 'light'
+              : theme}
           </span>
         </div>
         <div className="flex-0">
@@ -89,7 +98,6 @@ const ThemeChanger = ({
                     ),
                   ].map((item, index) => (
                     <li key={index}>
-                      {}
                       <a
                         onClick={(e) => changeTheme(e, item)}
                         className={`${theme === item ? 'active' : ''}`}
