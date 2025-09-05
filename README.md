@@ -114,7 +114,7 @@ I am a **Senior Software Engineer** with **9+ years of professional experience**
 
 <p align="center"> 
   Visitor Count<br>
-  <img src="https://profile-counter.glitch.me/manoj1991/count.svg" />
+  <img src="https://komarev.com/ghpvc/?username=manoj1991&color=blueviolet&style=flat" alt="Profile views" />
 </p>
 
 ---
