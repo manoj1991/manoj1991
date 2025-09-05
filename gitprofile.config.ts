@@ -112,7 +112,7 @@ const CONFIG = {
     stackoverflow: '5312898/manoj-kadolkar', // example: '1/jeff-atwood'
     discord: '',
     telegram: '',
-    website: 'https://www.manoj1991.com',
+    website: 'https://manoj1991.vercel.app',
     phone: '',
     email: 'manojmkadolkar@gmail.com',
   },

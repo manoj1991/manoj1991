@@ -112,11 +112,10 @@ I am a **Senior Software Engineer** with **9+ years of professional experience**
 
 ---
 
-<p align="center"> 
+<p align="center">
   Visitor Count<br>
-  <img src="https://komarev.com/ghpvc/?username=manoj1991&color=blueviolet&style=flat" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=manoj1991&label=Visitors&color=ff69b4&style=for-the-badge" alt="Profile views" />
 </p>
-
 ---
 
 ⭐️ From [manoj1991](https://github.com/manoj1991)
