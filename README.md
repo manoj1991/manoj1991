@@ -3,7 +3,8 @@
 <!-- Typing SVG -->
 <p align="center">
   <a href="https://github.com/manoj1991">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=F700FF&center=true&vCenter=true&width=600&lines=Senior+Software+Engineer;Full+Stack+Developer;React+%7C+Next.js+%7C+Node.js;Web3+%7C+Blockchain+%7C+GraphQL;9%2B+Years+Experience+in+Software+Engineering" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=F700FF&center=true&vCenter=true&width=600&lines=Senior+Software+Engineer;Full+Stack+Developer;React+%7C+Next.js+%7C+Node.js;Web3+%7C+Blockchain+%7C+GraphQL;9%2B%20Years%20Experience%20in%20Software%20Engineering" alt="Typing SVG" />
+
   </a>
 </p>
 

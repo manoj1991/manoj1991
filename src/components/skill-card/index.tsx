@@ -21,17 +21,21 @@ const SkillCard = ({
   };
 
   return (
+     <div className="card bg-base-200 shadow-xl border border-base-300">
+      <div className="card-body p-8">
+         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+            <div className="flex items-center space-x-3">
+              <h3 className="text-base sm:text-lg font-bold text-base-content truncate">
+                {loading ? (
+                    skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
+                  ) : (
+                    <span className="text-base-content">Tech Stack</span>
+                )}
+              </h3>
+            </div>
+          </div>
     <div className="card shadow-lg card-sm bg-base-100">
       <div className="card-body">
-        <div className="mx-3">
-          <h5 className="card-title">
-            {loading ? (
-              skeleton({ widthCls: 'w-32', heightCls: 'h-8' })
-            ) : (
-              <span className="text-base-content opacity-70">Tech Stack</span>
-            )}
-          </h5>
-        </div>
         <div className="p-3 flow-root">
           <div className="-m-1 flex flex-wrap justify-center gap-2">
             {loading
@@ -44,6 +48,8 @@ const SkillCard = ({
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 };

@@ -24,6 +24,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "global.d.ts"],   // ⬅️ removed gitprofile.config.ts
+  "include": ["src", "global.d.ts", "src/types"],   
   "references": [{ "path": "./tsconfig.node.json" }]
 }

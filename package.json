@@ -16,7 +16,8 @@
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
     "@arifszn/blog-js": "^2.0.6",
@@ -44,6 +45,10 @@
     "vite": "^7.0.2",
     "vite-plugin-html": "^3.2.2",
     "vite-plugin-pwa": "^1.0.1"
+  },
+  "resolutions": {
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
   },
   "keywords": [
     "git-profile",

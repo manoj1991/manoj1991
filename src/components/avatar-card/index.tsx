@@ -2,6 +2,7 @@ import { FALLBACK_IMAGE } from '../../constants';
 import { Profile } from '../../interfaces/profile';
 import { skeleton } from '../../utils';
 import LazyImage from '../lazy-image';
+import { TypeAnimation } from 'react-type-animation'; // 👈 added
 
 interface AvatarCardProps {
   profile: Profile | null;
@@ -10,14 +11,6 @@ interface AvatarCardProps {
   resumeFileUrl?: string;
 }
 
-/**
- * Renders an AvatarCard component.
- * @param profile - The profile object.
- * @param loading - A boolean indicating if the profile is loading.
- * @param avatarRing - A boolean indicating if the avatar should have a ring.
- * @param resumeFileUrl - The URL of the resume file.
- * @returns JSX element representing the AvatarCard.
- */
 const AvatarCard: React.FC<AvatarCardProps> = ({
   profile,
   loading,
@@ -58,7 +51,9 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
             </div>
           </div>
         )}
+
         <div className="text-center mx-auto px-8">
+          {/* Name */}
           <h5 className="font-bold text-2xl">
             {loading || !profile ? (
               skeleton({ widthCls: 'w-48', heightCls: 'h-8' })
@@ -68,6 +63,31 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
               </span>
             )}
           </h5>
+
+          {/* 👇 Typing effect directly under the name */}
+          {!loading && (
+            <TypeAnimation
+              sequence={[
+                'Senior Software Engineer',
+                2000,
+                'Full Stack Developer',
+                2000,
+                'React | Next.js | Node.js',
+                2000,
+                'Web3 | Blockchain | GraphQL',
+                2000,
+                // '9+ Years Experience in Software Engineering',
+                // 2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              className="block mt-2 text-lg font-mono"
+              style={{ color: 'var(--color-primary)' }}
+              repeat={Infinity}
+            />
+          )}
+
+          {/* Bio */}
           <div className="mt-3 text-base-content font-mono">
             {loading || !profile
               ? skeleton({ widthCls: 'w-48', heightCls: 'h-5' })
@@ -75,7 +95,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
           </div>
         </div>
 
-        {/* 👇 Added description before Resume button */}
+        {/* Description */}
         {!loading && (
           <p className="mt-6 px-6 text-sm text-center text-base-content opacity-80 leading-relaxed">
             I am a passionate web developer specializing in modern frontend
@@ -85,6 +105,7 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
           </p>
         )}
 
+        {/* Resume Button */}
         {resumeFileUrl &&
           (loading ? (
             <div className="mt-6">
