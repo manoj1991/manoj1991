@@ -118,8 +118,14 @@ const CONFIG = {
     email: 'manojmkadolkar@gmail.com',
   },
   resume: {
-    fileUrl: '/Manoj_kadolkar-9y-sp.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '/MANOJ_M_KADOLKAR_.pdf', // Empty fileUrl will hide the `Download Resume` button.
   },
+  counters: [
+    { label: 'Years of experience', value: 9, prefix: '+' },
+    { label: 'Happy Clients', value: 26, prefix: '+' },
+    { label: 'Projects Completed', value: 33, prefix: '+' },
+  ],
+
   skills: [
     'JavaScript',
     'TypeScript',

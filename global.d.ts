@@ -89,6 +89,28 @@ interface Projects {
   external?: ExternalProjects;
 }
 
+interface Counter {
+  /**
+   * Counter label shown below the value
+   */
+  label: string;
+
+  /**
+   * Numeric value displayed by the counter
+   */
+  value: number;
+
+  /**
+   * Optional prefix preceding the value (for example '+')
+   */
+  prefix?: string;
+
+  /**
+   * Optional suffix following the value (for example 'k')
+   */
+  suffix?: string;
+}
+
 interface SEO {
   /**
    * Meta title
@@ -336,6 +358,11 @@ interface Config {
    * Social links
    */
   social?: Social;
+
+  /**
+   * Metric counters displayed in the summary section
+   */
+  counters?: Array<Counter>;
 
   /**
    * Skill list

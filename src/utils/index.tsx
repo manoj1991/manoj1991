@@ -87,6 +87,21 @@ export const getSanitizedConfig = (
         fileUrl: config?.resume?.fileUrl || '',
       },
       skills: config?.skills || [],
+      counters:
+        config?.counters
+          ?.filter(
+            (counter) =>
+              typeof counter?.label === 'string' &&
+              counter.label.trim().length > 0 &&
+              counter?.value !== undefined &&
+              !Number.isNaN(Number(counter.value)),
+          )
+          ?.map((counter) => ({
+            label: counter.label.trim(),
+            value: Number(counter.value),
+            prefix: counter?.prefix,
+            suffix: counter?.suffix,
+          })) || [],
       experiences:
         config?.experiences?.filter(
           (experience) =>

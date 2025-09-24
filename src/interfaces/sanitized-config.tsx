@@ -33,6 +33,13 @@ export interface SanitizedExternalProjects {
   projects: SanitizedExternalProject[];
 }
 
+export interface SanitizedCounter {
+  label: string;
+  value: number;
+  prefix?: string;
+  suffix?: string;
+}
+
 export interface SanitizedProjects {
   github: SanitizedGitHubProjects;
   external: SanitizedExternalProjects;
@@ -133,6 +140,7 @@ export interface SanitizedConfig {
   social: SanitizedSocial;
   resume: SanitizedResume;
   skills: Array<string>;
+  counters: Array<SanitizedCounter>;
   experiences: Array<SanitizedExperience>;
   educations: Array<SanitizedEducation>;
   certifications: Array<SanitizedCertification>;

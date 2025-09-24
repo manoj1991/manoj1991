@@ -19,6 +19,7 @@ import AvatarCard from './avatar-card';
 import { Profile } from '../interfaces/profile';
 import DetailsCard from './details-card';
 import SkillCard from './skill-card';
+import CounterCard from './counter-card';
 import ExperienceCard from './experience-card';
 import EducationCard from './education-card';
 import CertificationCard from './certification-card';
@@ -244,6 +245,13 @@ const GitProfile = ({ config }: { config: Config }) => {
                     />
                   )}
                  
+                  {sanitizedConfig.counters.length !== 0 && (
+                    <CounterCard
+                      loading={loading}
+                      counters={sanitizedConfig.counters}
+                    />
+                  )}
+
                   {sanitizedConfig.experiences.length !== 0 && (
                     <ExperienceCard
                       loading={loading}
