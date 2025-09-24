@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { SanitizedCounter } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 
